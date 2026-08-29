@@ -1,4 +1,8 @@
-# サポカ外因子チェッカー　ウマ娘因子比較アプリ v0.1.9
+# サポカ外因子チェッカー / Support Card Gap Checker
+
+日本語DMM版とSteam English版は、対応画像・ポート・保存データが完全に分かれた別エディションです。データの変換、共有、相互比較には対応しません。
+
+## 日本語DMM版 v0.1.9
 
 育成ウマ娘の因子画像をOCRで読み取り、因子を保存・比較するWindows向けローカルアプリです。
 
@@ -31,6 +35,11 @@
 - 「白因子比較」の横スクロールバーを因子名の見出し直下へ移動しました。
 - ボタン名を「因子データ保存」「因子データ読込」へ変更しました。
 - 「因子データ保存」で`Uma\因子データ`へ日時入りJSONを直接保存するようにしました。
+- 画面最上部に、現在起動しているアプリの版番号を表示するようにしました。
+- アプリ名左側の黄色い装飾線を削除しました。
+- 更新後に旧版のCSSやJavaScriptが表示されないよう、配布版番号によるキャッシュ対策を追加しました。
+- 画面共有で撮影する画像の上限を8枚から12枚へ拡張し、9枚目以降も追加できるようにしました。
+- 上限を超えた撮影を「追加済み」と誤表示せず、最大枚数の案内を表示するようにしました。
 
 ## 因子データの保存
 
@@ -56,4 +65,36 @@
 
 「ウマ娘 プリティーダービー」に関する権利は各権利者に帰属します。利用にあたっては、[「ウマ娘 プリティーダービー」二次創作ガイドライン](https://umamusume.jp/derivativework_guidelines/)も確認してください。
 
+---
 
+## Steam English Edition: Support Card Gap Checker en-v0.1.0
+
+**Umamusume Spark Comparison App** reads supported 1920 x 1080 Steam English inheritance Spark screenshots locally, then lets you review, save, and compare the results.
+
+This is a free unofficial tool. It is not affiliated with the game, Cygames, or any other rights holder.
+
+### Download
+
+Open the dedicated `en-v0.1.0` release and download:
+
+- `SupportCardGapChecker-en-win-x64-portable-v0.1.0.zip`
+
+Check the ZIP against `SHA256SUMS.txt` from the same release.
+
+### Start
+
+1. Right-click the ZIP and choose **Extract All**.
+2. Open the extracted `UmaEN` folder.
+3. Double-click `Start Support Card Gap Checker.cmd`.
+4. Add Steam English screenshots and run OCR.
+5. Review every result before saving.
+
+No installer, administrator privileges, Python setup, or separate OCR setup is required. OCR runs locally with the bundled model and works offline after extraction.
+
+### Separate edition and data
+
+- Steam English edition: `http://127.0.0.1:8766`, `UmaEN\SparkData`, dedicated IndexedDB
+- Japanese DMM edition: `http://127.0.0.1:8765`, `Uma\因子データ`, separate IndexedDB
+- Backup files are edition-specific and cross-edition import is rejected.
+
+See [README.en.md](README.en.md) for details. The application is free proprietary software; see [LICENSE.en.txt](LICENSE.en.txt) for usage and redistribution terms.
