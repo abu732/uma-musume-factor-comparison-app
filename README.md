@@ -6,7 +6,7 @@
 
 育成ウマ娘の因子画像をOCRで読み取り、因子を保存・比較するWindows向けローカルアプリです。
 
-本アプリは無料非公式ツールです。ゲーム本体、Cygames、その他の権利者とは関係ありません。
+本アプリは非公式ツールです。ゲーム本体、Cygames、その他の権利者とは関係ありません。
 
 ## ダウンロード
 
@@ -59,7 +59,7 @@
 
 ## ライセンスと利用条件
 
-本アプリは、無料プロプライエタリです。利用・再配布などの条件は[LICENSE.txt](LICENSE.txt)を確認してください。
+本アプリは、プロプライエタリです。利用・再配布などの条件は[LICENSE.txt](LICENSE.txt)を確認してください。
 
 第三者ソフトウェアのライセンスは[THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)に記載しています。
 
@@ -71,7 +71,7 @@
 
 **Umamusume Spark Comparison App** reads supported 1920 x 1080 Steam English inheritance Spark screenshots locally, then lets you review, save, and compare the results.
 
-This is a free unofficial tool. It is not affiliated with the game, Cygames, or any other rights holder.
+This is an unofficial tool. It is not affiliated with the game, Cygames, or any other rights holder.
 
 ### Download
 
@@ -97,4 +97,4 @@ No installer, administrator privileges, Python setup, or separate OCR setup is r
 - Japanese DMM edition: `http://127.0.0.1:8765`, `Uma\因子データ`, separate IndexedDB
 - Backup files are edition-specific and cross-edition import is rejected.
 
-See [README.en.md](README.en.md) for details. The application is free proprietary software; see [LICENSE.en.txt](LICENSE.en.txt) for usage and redistribution terms.
+See [README.en.md](README.en.md) for details. The application is proprietary software; see [LICENSE.en.txt](LICENSE.en.txt) for usage and redistribution terms.
