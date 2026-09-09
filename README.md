@@ -1,5 +1,9 @@
 # サポカ外因子チェッカー / Support Card Gap Checker
 
+**本育成サポカ外で欲しい白因子が、選択した継承ウマ娘に何面あるか横並びで確認できる**
+
+![サポカ外因子チェッカーで、選択した継承ウマ娘の白因子を横並び比較している画面](github-assets/compare-current-evaluation-redacted.png)
+
 日本語DMM版とSteam English版は、対応画像・ポート・保存データが完全に分かれた別エディションです。データの変換、共有、相互比較には対応しません。
 
 ## 日本語DMM版 v0.1.9
