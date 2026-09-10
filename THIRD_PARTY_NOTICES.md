@@ -4,7 +4,7 @@
 以下の第三者の構成要素にはアプリ本体の利用条件ではなく、それぞれの権利者が定める
 ライセンスが適用されます。
 
-サポカ外因子チェッカー　ウマ娘因子比較アプリは、PaddlePaddle、PaddleOCR、PaddleX、FastAPI、Uvicorn、
+ウマ娘因子比較アプリ　サポカ外因子チェッカーは、PaddlePaddle、PaddleOCR、PaddleX、FastAPI、Uvicorn、
 NumPy、Pillowなどの第三者ソフトウェアを利用します。
 
 PaddleXが任意で利用する `ujson` は不要なネイティブ拡張のため配布物から除外し、
