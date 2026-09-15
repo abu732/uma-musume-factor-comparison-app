@@ -1,12 +1,10 @@
-# ウマ娘因子比較アプリ　サポカ外因子チェッカー / Support Card Gap Checker
+# ウマ娘因子比較アプリ　サポカ外因子チェッカー
 
-**本育成サポカ外で欲しい白因子が、選択した継承ウマ娘に何面あるか横並びで確認できるアプリです。**
+**欲しい白因子が親・祖等のウマ娘に何面あるか確認できるアプリです。**
 
-![サポカ外因子チェッカーで、選択した継承ウマ娘の白因子を横並び比較している画面](github-assets/compare-current-evaluation-redacted.png)
+![選択した継承ウマ娘の白因子を横並び比較しているv0.1.10の画面](github-assets/compare-v0110-publicity-redacted.png)
 
-日本語DMM版とSteam English版は、対応画像・ポート・保存データが完全に分かれた別エディションです。データの変換、共有、相互比較には対応しません。
-
-## 日本語DMM版 v0.1.9
+## v0.1.10
 
 育成ウマ娘の因子画像をOCRで読み取り、因子を保存・比較するWindows向けローカルアプリです。
 
@@ -16,7 +14,7 @@
 
 [GitHub Releases](https://github.com/abu732/uma-musume-factor-comparison-app/releases/latest)から、次のファイルをダウンロードしてください。
 
-- `UmaFactor-win-x64-portable-v0.1.9.zip`
+- `UmaFactor-win-x64-portable-v0.1.10.zip`
 
 同じReleaseにある`SHA256SUMS.txt`で、ダウンロードしたZIPのSHA-256を確認できます。
 
@@ -33,26 +31,19 @@
 
 詳しい手順と注意事項は、Releaseに添付した`README-FIRST.txt`と`PORTABLE-GUIDE.txt`を確認してください。
 
-## v0.1.9の主な変更
+## v0.1.10の主な変更
 
-- 段階点OCRの信頼度が低い場合や、評価点からの候補と一致しない場合に、因子タブで段階点を確認・修正できるようにしました。
-- 重要スキル入力欄から、辞書へ未登録の新規実装スキルも追加できるようにしました。
-- 「白因子比較」の横スクロールバーを因子名の見出し直下へ移動しました。
-- 画面上部のボタンで、左側の保存済み因子列を表示・非表示にできるようにしました。選択した状態は同じブラウザに保存されます。
-- ボタン名を「因子データ保存」「因子データ読込」へ変更しました。
-- 「因子データ保存」で、再読込可能なJSONバックアップと表計算ソフト向けのCSV一覧を選択できるようにしました。
-- 画面最上部に、現在起動しているアプリの版番号を表示するようにしました。
-- アプリ名左側の黄色い装飾線を削除しました。
-- 更新後に旧版のCSSやJavaScriptが表示されないよう、配布版番号によるキャッシュ対策を追加しました。
-- 画面共有で撮影する画像の上限を8枚から12枚へ拡張し、9枚目以降も追加できるようにしました。
-- 上限を超えた撮影を「追加済み」と誤表示せず、最大枚数の案内を表示するようにしました。
-- Windows日本語環境でOCR出力にCP932外の文字が含まれた場合、処理完了後に失敗となる問題を修正しました。
-- 画面上端の青・赤・緑因子を保持し、青因子を判定できない場合も次の赤因子から親1・親2の人物境界を復元するようにしました。
-- OCR失敗時に、画像やOCR結果を含まない診断情報を`Uma\.app-state\diagnostic.log`へ記録するようにしました。
+- 画面上部を整理し、アプリ名の右側に「重要スキルセット」「因子データ」の順で操作を配置しました。
+- 重要スキルの保存単位を「重要スキルセット」と表記し、選択プルダウンから切り替えられるようにしました。
+- 「因子データ」の「保存」でJSONバックアップを保存し、「読込」でJSONを読み込み、「CSV出力」で表計算ソフト向け一覧を出力する構成にしました。
+- 因子名などの編集中だけ「編集」の「保存」を表示するようにしました。
+- 比較表の各ウマ娘に「表示」を追加しました。チェックを外すと比較対象から除外し、左側の保存済み因子一覧から再追加できます。
+- 左側の保存済み因子一覧を、画面左上の一覧アイコンで表示・非表示にできるようにしました。状態は同じブラウザに保存します。
+- メイン画面の書体を統一し、文字サイズを14pxに揃えました。
 
 ## 因子データの保存
 
-「因子データ保存」では、`Uma\因子データ`へ再読込可能なJSONバックアップ、または1因子1行のCSV一覧を保存できます。CSVはUTF-8 BOM付きで、Excelなどの表計算ソフトで確認できますが、アプリへの読込には対応していません。新しい版を別フォルダーへ展開した場合は、「因子データ読込」から旧版のJSONを選択できます。
+画面上部の「因子データ」にある「保存」では、`Uma\因子データ`へ再読込可能なJSONバックアップを保存します。「CSV出力」では1因子1行のCSV一覧を同じ場所へ保存します。CSVはUTF-8 BOM付きで、Excelなどの表計算ソフトで確認できますが、アプリへの読込には対応していません。新しい版を別フォルダーへ展開した場合は、「読込」から旧版のJSONを選択できます。
 
 展開した`Uma`フォルダーを削除すると、その中の`因子データ`も削除されます。JSONやCSVを残す場合は、削除前にドキュメントなど別の場所へコピーしてください。
 
@@ -73,37 +64,3 @@
 第三者ソフトウェアのライセンスは[THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)に記載しています。
 
 「ウマ娘 プリティーダービー」に関する権利は各権利者に帰属します。利用にあたっては、[「ウマ娘 プリティーダービー」二次創作ガイドライン](https://umamusume.jp/derivativework_guidelines/)も確認してください。
-
----
-
-## Steam English Edition: Support Card Gap Checker en-v0.1.0
-
-**Umamusume Spark Comparison App** reads supported 1920 x 1080 Steam English inheritance Spark screenshots locally, then lets you review, save, and compare the results.
-
-This is an unofficial tool. It is not affiliated with the game, Cygames, or any other rights holder.
-
-### Download
-
-Open the dedicated `en-v0.1.0` release and download:
-
-- `SupportCardGapChecker-en-win-x64-portable-v0.1.0.zip`
-
-Check the ZIP against `SHA256SUMS.txt` from the same release.
-
-### Start
-
-1. Right-click the ZIP and choose **Extract All**.
-2. Open the extracted `UmaEN` folder.
-3. Double-click `Start Support Card Gap Checker.cmd`.
-4. Add Steam English screenshots and run OCR.
-5. Review every result before saving.
-
-No installer, administrator privileges, Python setup, or separate OCR setup is required. OCR runs locally with the bundled model and works offline after extraction.
-
-### Separate edition and data
-
-- Steam English edition: `http://127.0.0.1:8766`, `UmaEN\SparkData`, dedicated IndexedDB
-- Japanese DMM edition: `http://127.0.0.1:8765`, `Uma\因子データ`, separate IndexedDB
-- Backup files are edition-specific and cross-edition import is rejected.
-
-See [README.en.md](README.en.md) for details. The application is proprietary software; see [LICENSE.en.txt](LICENSE.en.txt) for usage and redistribution terms.
